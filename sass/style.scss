@@ -1,0 +1,252 @@
+@import './variables.scss';
+@import './reset.scss';
+@import './general.scss';
+
+
+.header {
+  padding: 2rem 0;
+  
+  .header__logo {
+    width: 100px;
+  }
+}
+
+.image {
+  width: 100%;
+  max-height: 250px;
+  display: flex;
+
+  img {
+    width: 100%;
+    object-position: top;
+    object-fit: cover;
+    max-width: none;
+  }
+}
+
+.hero {
+  margin-top: 4rem; 
+  text-align: center;
+
+  .hero__title {
+    font-size: $fs-header;
+    text-transform: uppercase;
+    letter-spacing: 11px;
+    font-weight: $fw-light;
+    line-height: 1.05;
+    margin-bottom: 1rem;
+
+    .hero__title-bold {
+      color: $clr-500;
+      font-weight: $fw-bold;
+    }
+  }
+
+  .hero__description {
+    margin: 0 auto 2rem auto;
+    max-width: 420px;
+  }
+
+  .hero__form {
+    position: relative;
+    max-width: 350px;
+    margin: 0 auto;
+    
+    .form__input {
+      width: 100%;
+      height: 48px;
+      border-radius: 24px;
+      background: none;
+      border: 1px solid $clr-300-transparent;
+      padding: 11px 0 9px 24px; 
+      transition: border 0.3s;
+      
+      &::placeholder { 
+        opacity: 0.5;
+        color: $clr-300; 
+      }
+      &:focus { 
+        outline: none;
+        border: 1px solid $clr-300;
+      }
+    }
+
+    .form__button {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      position: absolute;
+      top: 0;
+      right: 0;
+      height: 48px;
+      width: 64px;
+
+      border: none;
+      border-radius: 28px;
+      background-image: linear-gradient(135deg, $clr-200 0%, $clr-400 100%);
+      box-shadow: 0px 15px 20px rgba(198, 110, 110, 0.247569);
+    
+      cursor: pointer;
+
+      &:hover .button__icon {
+        animation: slide 0.4s;
+      }
+    }
+
+    .form__errorIcon {
+      position: absolute;
+      right: 72px;
+      top: 24px;
+      transform: translateY(-50%);
+    }
+
+    .form__errorMessage {
+      margin-top: 0.5rem;
+      margin-left: 1.5rem;
+      text-align: left;
+      font-size: $fs-accent;
+      color: $clr-accent;
+    }
+
+    .form__errorIcon, .form__errorMessage {
+      visibility: hidden;
+      opacity: 0;
+      transition: 0.3s;
+    }
+  }
+
+  .hero__form.invalid {
+    .form__errorIcon, .form__errorMessage {
+      visibility: visible;
+      opacity: 1;
+    }
+    .form__input {
+      border: 1px solid $clr-accent;
+    }
+  }
+}
+
+/* ------ ANIMATE BUTTON ------ */
+
+@keyframes slide {
+  48% {
+    transform: translateX(25px);
+    opacity: 0;
+  }
+  52% { 
+    transform: translateX(-25px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
+/* ------ ANIMATE LETTERS ------ */
+
+.hero__title-bold {
+  display: block;
+  .line {
+    display: block;
+    .letter {
+      animation: wiggle 7s infinite;
+      display: inline-block;
+    }
+  }
+}
+
+@keyframes wiggle {
+  2% { transform: translateY(-8px); }
+  4% { transform: translateY(5px); }
+  6% { transform: translateY(-3px); }
+  8% { transform: translateY(0); }
+}
+
+/* ------ MEDIA ------ */
+
+@media (min-width: 769px) {
+  .page {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 30% 70%;
+    column-gap: 50px;
+    min-height: 100vh;
+    
+    .header, .hero {
+      grid-column: 1;
+    }
+    .image {
+      grid-column: 2;
+      grid-row: 1 / 3;
+      max-height: 100%;
+    }
+  }
+
+  .header {
+    padding: 0;
+    padding-top: 75px;
+
+    .header__logo { width: 130px; }
+  }
+
+  .hero {
+    margin-top: 0;
+    text-align: left;
+    max-width: 445px;
+
+    .hero__title {
+      font-size: $fs-header-tablet;
+      letter-spacing: 17px;
+      line-height: 1;
+      margin-bottom: 2rem;
+      
+      .hero__title-bold {
+        line-height: 1.1;
+      }
+    }
+
+    .hero__description {
+      margin: 0;
+      line-height: 1.75;
+      max-width: none;
+      margin-bottom: 2.5rem;
+    }
+
+    .hero__form {
+      max-width: none;
+
+      .form__input {
+        height: 56px;
+        border-radius: 28px;
+        padding: 0 2rem;
+      }
+
+      .form__button {
+        width: 100px;
+        height: 56px;
+        border-radius: 28px;
+      }
+
+      .form__errorIcon {
+        right: 116px;
+        top: 28px;
+      }
+      
+      .form__errorMessage {
+        margin-top: 0.25rem;
+        margin-left: 2rem;
+      }
+    }
+  }
+}
+
+@media (min-width: 1000px) {
+  .page { column-gap: 100px; }
+  .header .header__logo { width: 158px; }
+  .hero .hero__title { font-size: $fs-header-desktop; }
+}
+
+@media (min-width: 1200px) {
+  .page { column-gap: 220px; }
+}

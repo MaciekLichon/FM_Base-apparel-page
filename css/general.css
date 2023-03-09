@@ -1,0 +1,39 @@
+/* COLORS */
+/* TYPE */
+body {
+  background-image: linear-gradient(150.03deg, #FFFFFF 0%, #FFF4F4 84.51%);
+  font-family: "Josefin Sans", sans-serif;
+  color: #ce9797;
+  font-size: 0.875rem;
+}
+
+.container {
+  margin: 0 2rem;
+}
+
+@media (min-width: 769px) {
+  body {
+    font-size: 1rem;
+    background-image: url("../images/bg-pattern-desktop.svg"), linear-gradient(150.03deg, #FFFFFF 0%, #FFF4F4 84.51%);
+    background-repeat: no-repeat;
+    background-size: 60% 100%;
+    background-position: 0 0;
+  }
+  .container {
+    margin: 0;
+    margin-left: 60px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .container {
+    margin-left: 100px;
+  }
+}
+
+@media (min-width: 1300px) {
+  .container {
+    margin-left: 165px;
+  }
+}
+/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIi4uL3Nhc3MvdmFyaWFibGVzLnNjc3MiLCIuLi9zYXNzL2dlbmVyYWwuc2NzcyIsImdlbmVyYWwuY3NzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiJBQUNBLFdBQUE7QUFVQSxTQUFBO0FDVEE7RUFDRSx3RUFBd0U7RUFFeEUsdUNET3FDO0VDTnJDLGNERjRCO0VDRzVCLG1CRFdtQjtBRVhyQjs7QURHQTtFQUFhLGNBQWM7QUNDM0I7O0FERUE7RUFDRTtJQUNFLGVEU3FCO0lDUnJCLGlIQUFpSDtJQUNqSCw0QkFBNEI7SUFDNUIseUJBQXlCO0lBQ3pCLHdCQUF3QjtFQ0MxQjtFRENBO0lBQ0UsU0FBUztJQUNULGlCQUFpQjtFQ0NuQjtBQUNGOztBREVBO0VBQ0U7SUFBYSxrQkFBa0I7RUNFL0I7QUFDRjs7QURBQTtFQUNFO0lBQWEsa0JBQWtCO0VDSS9CO0FBQ0YiLCJmaWxlIjoiZ2VuZXJhbC5jc3MifQ== */

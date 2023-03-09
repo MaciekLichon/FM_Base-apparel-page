@@ -1,0 +1,60 @@
+/*
+  1. Use a more-intuitive box-sizing model.
+*/
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+/*
+  2. Remove default margin
+*/
+* {
+  margin: 0;
+}
+
+/*
+  3. Allow percentage-based heights in the application
+*/
+html, body {
+  height: 100%;
+}
+
+/*
+  Typographic tweaks!
+  4. Add accessible line-height
+  5. Improve text rendering
+*/
+body {
+  line-height: 1.57;
+  -webkit-font-smoothing: antialiased;
+}
+
+/*
+  6. Improve media defaults
+*/
+img, picture, video, canvas, svg {
+  display: block;
+  max-width: 100%;
+}
+
+/*
+  7. Remove built-in form typography styles
+*/
+input, button, textarea, select {
+  font: inherit;
+}
+
+/*
+  8. Avoid text overflows
+*/
+p, h1, h2, h3, h4, h5, h6 {
+  overflow-wrap: break-word;
+}
+
+/*
+  9. Create a root stacking context
+*/
+#root, #__next {
+  isolation: isolate;
+}
+/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIi4uL3Nhc3MvcmVzZXQuc2NzcyIsInJlc2V0LmNzcyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiQUFBQTs7Q0NFQztBRENEO0VBQ0Usc0JBQXNCO0FDQ3hCOztBRENBOztDQ0dDO0FEQUQ7RUFDRSxTQUFTO0FDRVg7O0FEQUE7O0NDSUM7QURERDtFQUNFLFlBQVk7QUNHZDs7QUREQTs7OztDQ09DO0FERkQ7RUFDRSxpQkFBaUI7RUFDakIsbUNBQW1DO0FDSXJDOztBREZBOztDQ01DO0FESEQ7RUFDRSxjQUFjO0VBQ2QsZUFBZTtBQ0tqQjs7QURIQTs7Q0NPQztBREpEO0VBQ0UsYUFBYTtBQ01mOztBREpBOztDQ1FDO0FETEQ7RUFDRSx5QkFBeUI7QUNPM0I7O0FETEE7O0NDU0M7QURORDtFQUNFLGtCQUFrQjtBQ1FwQiIsImZpbGUiOiJyZXNldC5jc3MifQ== */
